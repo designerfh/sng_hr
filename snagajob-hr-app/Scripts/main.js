@@ -73,8 +73,15 @@ function loadApplicantResults(userId, role) {
         dataType: 'json',
         contentType: "application/json;charset=utf-8",
         success: function (data) {
+            if (data != null)
+            {
             currentResult = data;
             loadApplicantQuestions(data, role);
+            }
+            else
+            {
+                alert("You have no applications at this time. ")
+            }
         }
     });
 }
