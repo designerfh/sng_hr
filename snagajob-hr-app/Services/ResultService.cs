@@ -29,7 +29,7 @@ namespace snagajob_hr_app.Services
         public async Task<JobApplicationResult> GetApplicationResultByUserId(string userId)
         {
             IMongoQueryable<JobApplicationResult> query = collection.AsQueryable();
-            var result = await query.Where(x => x.User_Id == userId && x.Complete == false).FirstOrDefaultAsync();
+            var result = await query.Where(x => x.User_Id == userId && (x.Complete == false || x.Complete == null)).FirstOrDefaultAsync();
 
             return result;
         }
