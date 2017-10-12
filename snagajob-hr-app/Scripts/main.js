@@ -199,7 +199,7 @@ function createNewUserAndResult() {
     }).then(function () {
         var newResult = {
             Application_ID: $('#addNewApplication').val(),
-            ApplicationName: $('#addNewApplication').text(),
+            ApplicationName: $('#addNewApplication').find(":selected").text(),
             User_Id: newUser._id,
             UserName: newUser.Name
         };
@@ -296,7 +296,7 @@ function newApplication() {
     $('#adminAnswerTable tbody').empty();
     $('#newApplicationName').val('').removeAttr('data-appId');
 
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 10; i++) {
         var optText = "";
         for (var ii = 0; ii < 4; ii++) {
             optText += '<div><input type="text" placeholder="Enter Answer" /><input type="checkbox" /></div>'
@@ -377,7 +377,7 @@ function deleteApplication() {
         dataType: 'text json',
         contentType: "application/json;charset=utf-8",
         success: function (data) {
-            alert('Question Group has been deleted');
+            alert('Application has been deleted');
 
             loadApplications();
             newApplication();
