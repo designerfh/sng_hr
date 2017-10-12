@@ -1,0 +1,44 @@
+﻿body {
+}
+
+select {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    margin: 5px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.spanMargin {
+    margin-right: 8px
+}
+
+#newGroupName {
+    margin: 3px;
+}
+
+.floatRight {
+    float: right;
+}
+
+#questionTable th, answerTable th {
+    width: 300px
+}
+
+#adminAnswerTable th {
+    width: 400px;
+}
+
+#adminAnswerTable th:first-of-type {
+    width: 200px;
+}
+
+#adminAnswerTable input[type=text] {
+    margin: 3px;
+    width: 90%;
+}

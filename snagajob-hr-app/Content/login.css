@@ -1,0 +1,19 @@
+﻿body {
+    background-color: black;
+}
+
+input {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+.col-md-4 {
+    text-align: center;
+}
