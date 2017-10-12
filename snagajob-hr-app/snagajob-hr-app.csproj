@@ -94,6 +94,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\favicon.ico" />
     <Content Include="Content\login.css" />
     <Content Include="Content\main.css" />
     <Content Include="Content\SAJ-KO-logo.png" />

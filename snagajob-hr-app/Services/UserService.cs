@@ -28,9 +28,9 @@ namespace snagajob_hr_app.Services
 
             var collection = MongoContext.UsersCollection();
             IMongoQueryable<User> query = collection.AsQueryable();
-            var foundUser = await query.Where(x => x.Name.ToLower() == username).FirstAsync();
+            var foundUser = await query.Where(x => x.Name.ToLower() == username).FirstOrDefaultAsync();
 
-            if (foundUser.Password == password)
+            if (foundUser != null && foundUser.Password == password)
             {
                 data.Add(new KeyValuePair<string, string>("username", foundUser.Name));
                 data.Add(new KeyValuePair<string, string>("userId", foundUser._id.ToString()));
