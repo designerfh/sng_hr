@@ -1,0 +1,8 @@
+site_name: 'sng_hr'
+repo_url: https://github.carmax.com/designerfh/snag_hr
+
+nav:
+  - 'index.md'
+
+plugins:
+  - techdocs-core
